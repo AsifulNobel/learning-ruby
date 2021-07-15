@@ -1,9 +1,11 @@
-puts "First file"
+# frozen_string_literal: true
 
-load "loadable.rb"
+puts 'First file'
 
-puts "Back to first file"
+load 'loadable.rb'
 
-load "loadable.rb"
+puts 'Back to first file'
 
-puts "loaded second file again"
+load 'loadable.rb'
+
+puts 'loaded second file again'
