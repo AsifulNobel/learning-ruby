@@ -9,3 +9,10 @@ def empty_object.talk
 end
 
 empty_object.talk
+
+# Returns a value without explicit return keyword
+def empty_object.return_one
+  1
+end
+
+puts empty_object.return_one
