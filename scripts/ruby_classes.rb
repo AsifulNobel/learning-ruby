@@ -52,6 +52,7 @@ if __FILE__ == $PROGRAM_NAME # $PROGRAM_NAME is a Global variable
   selena_ticket = ConcertTicket.new('Selena Gomez', 'Concert S')
   selena_ticket.price = 150
 
+  # Class method call
   puts Ticket.most_expensive(selena_ticket, disturbed_ticket).price
-  p ConcertTicket::LINEUP
+  p ConcertTicket::LINEUP # Constant access
 end
