@@ -27,3 +27,14 @@ requested_object_method_name = gets.chomp # Gets user input and removes last cha
 
 # Dynamically call a method
 empty_object.send(requested_object_method_name) if empty_object.respond_to?(requested_object_method_name)
+
+def empty_object.args(first, second, third = 1, *all)
+  # default parameter cannot be on right-side of sponge parameter
+  puts first
+  puts second
+  puts third
+  p all # outputs in array notation
+end
+
+empty_object.args(3, 4)
+empty_object.args(5, 6, 7, 89, 90)
