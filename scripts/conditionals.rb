@@ -20,7 +20,8 @@ def maybe_quit?
   case gets.chomp
   when 'y', 'yes' # Multiple conditions
     exit
-  when 'n'
+  when 'n' # Syntactic sugar for 'n'.===(input)
+    # === is called the threequal or case subsumption operator
     puts 'Program exit cancelled'
   else
     puts 'Unknown command'
