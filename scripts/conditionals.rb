@@ -15,10 +15,26 @@ def less_than_90?(number)
   puts 'Less than 90' unless number > 90 # Means if not
 end
 
+def maybe_quit?
+  print 'Exit the program?[y/n] '
+  case gets.chomp
+  when 'y'
+    exit
+  when 'n'
+    puts 'Program exit cancelled'
+  else
+    puts 'Unknown command'
+  end
+
+  maybe_quit?
+end
+
 if __FILE__ == $PROGRAM_NAME
   print 'Enter a number: '
   given = gets.to_i
 
   more_than_100? given
   less_than_90? given
+
+  maybe_quit?
 end
