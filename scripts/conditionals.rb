@@ -18,7 +18,7 @@ end
 def maybe_quit?
   print 'Exit the program?[y/n] '
   case gets.chomp
-  when 'y'
+  when 'y', 'yes' # Multiple conditions
     exit
   when 'n'
     puts 'Program exit cancelled'
