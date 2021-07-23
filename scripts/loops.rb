@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 def while_loop(number)
   while number < 10
     puts number

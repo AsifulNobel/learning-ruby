@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 def change_string_to_tsundere(input_string)
   input_string.replace('tsundere') # frozen string error
   input_string

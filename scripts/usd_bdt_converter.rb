@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 puts 'Reading conversion rate from file...' # Prints text to stdout
 
 content = File.foreach('data/conversion_rate.txt').first # Reads first line from file

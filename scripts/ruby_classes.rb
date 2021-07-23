@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # A class to represent a ticket
 class Ticket
   attr_accessor :price # Syntactic sugar to add reader and writer methods

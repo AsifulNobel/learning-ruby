@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 def read_from_file(filename)
   # Initializing empty string like this due to frozen string literal directive
   content = String.new

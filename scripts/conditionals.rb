@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 def more_than_100?(number)
   if number > 100
     puts 'More than 100'

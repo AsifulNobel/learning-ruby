@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 puts 'testing require -> enter 2 to require loadable'
 
 # Conditional file loading

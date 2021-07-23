@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Get an empty generic object
 empty_object = Object.new
 
