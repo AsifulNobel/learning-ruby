@@ -60,6 +60,19 @@ class G
   extend M
 end
 
+# Test aliasing
+class F
+  # This can be used to extend any method of any class!
+  alias __original_report__ report
+
+  # rubocop:disable Lint/DuplicateMethods
+  def report
+    __original_report__
+    puts '*F'
+  end
+  # rubocop:enable Lint/DuplicateMethods
+end
+
 if __FILE__ == $PROGRAM_NAME
   coldplay_ticket = ConcertTicket.new('Coldplay', 'EURO 2020')
   coldplay_ticket.price = 150
@@ -73,7 +86,7 @@ if __FILE__ == $PROGRAM_NAME
   f_object.report # M
 
   f_object = F.new
-  f_object.report # F
+  f_object.report # *F
 
   p D.ancestors # [D, C, M, Object, Kernel, BasicObject]
   p E.ancestors # [M, E, Object, Kernel, BasicObject]
