@@ -24,9 +24,10 @@ at_exit do
   Curses.close_screen
 end
 
+long_text = 'Orange imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus mauris'
 menu_items = [
   Curses::Item.new('Apple', 'Red fruit'),
-  Curses::Item.new('Orange', 'Orange fruit'),
+  Curses::Item.new("#{long_text.slice(0, Curses.cols - 4)}...", 'Orange fruit'),
   Curses::Item.new('Banana', 'Yellow fruit'),
   Curses::Item.new('Mango', 'Green fruit')
 ]
